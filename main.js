@@ -23,7 +23,7 @@ var mouse = {
 	y: undefined
 }
 function draw() {
-	var x;
+    var x;
     var y;
     var delta = canvas.width / buffer; 
     var fx = 0;
@@ -41,8 +41,7 @@ function draw() {
 		context.strokeStyle = "white";
 		context.stroke();
 		fx += delta;
-		console.log(v);
-	
+		
 	}
 	
 }
