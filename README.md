@@ -23,6 +23,7 @@ The canvas element in combination with the Web Audio Api gives us a cool way to 
 var audioContext = new AudioContext();
 var analyser = audioContext.createAnalyser();
 ```
+Once the AudioContext.createAnalyser() method creates an AnalyserNode, we can start to extract the data from our audio source.
 
 
 
