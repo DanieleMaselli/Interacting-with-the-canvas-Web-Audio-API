@@ -1,35 +1,27 @@
-//select the first match
 var canvas = document.querySelector('canvas');
+var context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight; 
-//2 dimensional context we are gonna to draw
-var context = canvas.getContext('2d');
 var analyser;
-
 
 //////////Audio Part ////////////////
 var audio = new Audio();
 audio.src = 'audio.mp3';
-//create an analyser node 
+//create an Analyser Node 
 var audioContext = new AudioContext();
 analyser = audioContext.createAnalyser();
-//source 
 var source = audioContext.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(audioContext.destination);
 analyser.fftSize = 1024;
-
 var buffer = analyser.frequencyBinCount / 2;
 var data   = new Uint8Array(buffer);
 audio.play();
-//audio.play();
 /////////////////////////////////////
-
 var mouse = {
 	x: undefined,
 	y: undefined
 }
-
 function draw() {
 	var x;
     var y;
