@@ -19,9 +19,9 @@ canvas.height = window.innerHeight;
 To get the x, y coordinates of our mouse, we first need to create an EventListener on the DOM Element representing the screen (window). An EventListener is a function that will get called whenever an event occurs on a DOM Element. To attach an EventListener we need to call the function `<DOMElement>.addEventListener` with two arguments. The first argument is a string with the name of the `<event>` we want to monitor (in this case 'mousemove'). The second argument is the `handler` function. The handler function `must` take as first argument the event object (representing the event for that unit of time). Within the handler the `eventObject` contains the x, y values that we need. We then store this values in a global object. The handler is fired asynchronously so once the handler is attached we "forget about it" and from others part of our code we can reference the global object (updated by the handler).
 ```Javascript
 var mouse = {
-	x: undefined,
-	y: undefined
-}
+	x: 0,
+	y: 0
+};
 
 window.addEventListener('mousemove', 
 	function(event){
@@ -87,6 +87,7 @@ Our goal is to interact the moving circle with the audio source. In order to do 
 ```Javascript
 var buffer = analyser.frequencyBinCount;
 ```
+
 
 
 
