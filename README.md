@@ -18,6 +18,8 @@ The Web Audio API provides a variety of features that allow developers to select
 
 #### Visualisation with the Web Audio API: 
 
+The canvas element in combination with the web audio api gives us a cool way to generate visual on the browser.  
+
 
 
 
