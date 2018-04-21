@@ -28,6 +28,7 @@ But first, we have to create our audio object to get the actual source.
 ```Javascript
 var audio = new Audio();
 audio.src = 'audio.mp3';
+audio.play();
 ```
 Once we defined our audio variable, we can now connect the Node and the destination. 
 ```Javascript
