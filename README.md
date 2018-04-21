@@ -29,6 +29,8 @@ window.addEventListener('mousemove',
 }); 
 ```
 
+#### Step 2: Draw a Circle
+
 #### Web Audio API: 
 
 The Web Audio API provides a variety of features that allow developers to select audio sources, add effects to them, generate visualizations, playing sounds and much more.
