@@ -87,6 +87,12 @@ Our goal is to interact the moving circle with the audio source. In order to do 
 ```Javascript
 var buffer = analyser.frequencyBinCount;
 ```
+Next we declare the `data` variable with our `buffer` variable as an argument:
+```Javascript
+var data = new Uint8Array(buffer);
+```
+
+
 
 
 
