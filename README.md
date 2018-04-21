@@ -12,11 +12,22 @@ var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
 
 ```
-#### Step 1: Moving a circle with mousemove
+#### Step 1: mousemove coordinates
 
-To start drawing into our canvas we are going to define a function
+To get the coordinates of our mouse on the screen, we first need to create an Event Listener. As an argument, we have to think about on which type of monitoring we want. In order to monitor the mouse position on the screen, we pass a mousemove argument to it and passed through an anonymouse function that is gonna be called each time the mouse is moving. The function is gonna take an event argument to get the coordinate, this is gonna return us an object. To get the actual x and y position of our mouse we are going to create an object. 
+```Javascript
+var mouse = {
+	x: undefined,
+	y: undefined
+}
 
-
+window.addEventListener('mousemove', 
+	function(event){
+	mouse.x = event.x;
+	mouse.y = event.y;
+	 	
+}); 
+```
 
 #### Web Audio API: 
 
