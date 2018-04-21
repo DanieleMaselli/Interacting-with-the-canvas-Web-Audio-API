@@ -81,6 +81,13 @@ var source = audioContext.createMediaElementSource(audio);
 source.connect(analyser);
 analyser.connect(audioContext.destination);
 ```
+#### Merge Web Audio APi and Canvas
+
+Our goal is to interact the moving circle with the audio source. In order to do this, we need to declare a variable that is setting up the `buffer`. 
+```Javascript
+var buffer = analyser.frequencyBinCount;
+```
+
 
 
 
