@@ -12,6 +12,12 @@ var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
 
 ```
+#### Step 1: Moving a circle with mousemove
+
+To start drawing into our canvas we are going to define a function
+
+
+
 #### Web Audio API: 
 
 The Web Audio API provides a variety of features that allow developers to select audio sources, add effects to them, generate visualizations, playing sounds and much more.
