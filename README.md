@@ -10,6 +10,8 @@ A canvas is a single DOM element that encapsulates a picture. To create a new ca
 
 var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 ```
 #### Step 1: mousemove coordinates
