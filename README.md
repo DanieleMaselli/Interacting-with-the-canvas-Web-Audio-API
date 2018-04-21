@@ -91,6 +91,7 @@ Next we declare the `data` variable with our `buffer` variable as an argument:
 ```Javascript
 var data = new Uint8Array(buffer);
 ```
+We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context`, 
 
 
 
