@@ -14,7 +14,7 @@ var context = canvas.getContext('2d');
 ```
 #### Step 1: mousemove coordinates
 
-To get the coordinates of our mouse on the screen, we first need to create an Event Listener. As an argument, we have to think about on which type of monitoring we want. In order to monitor the mouse position on the screen, we pass a mousemove argument to it and passed through an anonymouse function that is gonna be called each time the mouse is moving. The function is gonna take an event argument to get the coordinate, this is gonna return us an object. To get the actual x and y position of our mouse we are going to create an object. 
+To get the coordinates of our mouse on the screen, we first need to create an Event Listener. As an argument, we have to think about on which type of monitoring we want. In order to monitor the mouse position on the screen, we pass a mousemove argument to it and passed through an anonymouse function that is gonna be called each time the mouse is moving. The function is gonna take an event argument to get the coordinate, this is gonna return us an object. To get the actual x and y position of our mouse we are going to create an object with a initial value of undefined. 
 ```Javascript
 var mouse = {
 	x: undefined,
