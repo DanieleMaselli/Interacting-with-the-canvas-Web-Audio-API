@@ -21,8 +21,9 @@ The Web Audio API provides a variety of features that allow developers to select
 The canvas element in combination with the Web Audio Api gives us a cool way to generate visual on the browser. To create a visual effect we first need an Analyser Node.
 ```Javascript
 var audioContext = new AudioContext();
-analyser = audioContext.createAnalyser();
+var analyser = audioContext.createAnalyser();
 ```
+
 
 
 
