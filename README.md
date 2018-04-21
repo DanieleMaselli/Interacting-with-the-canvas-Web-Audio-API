@@ -9,6 +9,7 @@ styles: "2d" for two-dimensional graphics and WebGl for three-dimensional graphi
 
 ```Javascript
 
-var canvas = document.querySelector("canvas");
+var canvas = document.querySelector('canvas');
+var context = canvas.getContext('2d');
 
 
