@@ -28,7 +28,7 @@ window.addEventListener('mousemove',
 		mouse.x = event.x;
 		mouse.y = event.y;
 	 	
-}); 
+});
 ```
 
 #### Step 2: Draw on Canvas 
