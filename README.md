@@ -24,10 +24,16 @@ var audioContext = new AudioContext();
 var analyser = audioContext.createAnalyser();
 ```
 Once the AudioContext.createAnalyser() method creates an AnalyserNode, we can start to extract the data from our audio source.
-But first, we have to create our audio constructor to get the actual source. 
+But first, we have to create our audio object to get the actual source. 
 ```Javascript
 var audio = new Audio();
 audio.src = 'audio.mp3';
+```
+Once we defined our audio variable, we can now connect the Node and the destination. 
+```Javascript
+var source = audioContext.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioContext.destination);
 ```
 
 
