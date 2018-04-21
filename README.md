@@ -31,9 +31,9 @@ window.addEventListener('mousemove',
 
 #### Step 2: Draw on Canvas 
 
-To draw a circle that moves with our mouse position, we need to declare a function `drawCircle`. This function is gonna have two parameters (x, y), that refers to the coordinate of the position where is gonna draw on the canvas. Inside the `body`, which contains the statements that are to be executed, we call the `arc()` method that is used to create circles. Next step is to declare a `clear` function that erase the canvas every time we are moving the mouse. But to actually draw the circle, we have to create a function `animate`. Inside the body, we call the `requestAnimationFrame` method.  
+To draw a circle that moves with our mouse position, we need to declare a function `drawCircle`. This function is gonna have two parameters (x, y), that refers to the coordinate of the position where is gonna draw on the canvas. Inside the `body`, which contains the statements that are to be executed, we call the `arc()` method that is used to create circles. Next step is to declare a `clear` function that erase the canvas every time we are moving the mouse. But to actually draw the circle, we have to create a function `animate`. Inside the body, we call the `requestAnimationFrame` method. This method  
 
-Inside the `body` we are going to call the `requestAnimationFrame` method,
+
 
 ```Javascript
 function drawCircle(x, y) {
