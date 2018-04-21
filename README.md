@@ -1,4 +1,4 @@
 # Interacting with the Canvas + Web Audio API
 
 
-##The Canvas Element: 
+## The Canvas Element: 
