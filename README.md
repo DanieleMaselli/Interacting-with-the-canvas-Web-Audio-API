@@ -16,7 +16,7 @@ var context = canvas.getContext('2d');
 
 The Web Audio API provides a variety of features that allow developers to select audio sources, add effects to them, generate visualizations, playing sounds and much more.
 
-#### Visualisation with the Web Audio API: 
+#### Visualizations with the Web Audio API: 
 
 The canvas element in combination with the Web Audio Api gives us a cool way to generate visual on the browser. To create a visual effect we first need an Analyser Node.
 ```Javascript
