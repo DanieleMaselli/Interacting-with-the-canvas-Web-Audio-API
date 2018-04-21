@@ -8,7 +8,7 @@ A canvas is a single DOM element that encapsulates a picture. To create a new ca
 
 ```Javascript
 
-var canvas = document.querySelector('canvas');
+var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
 
 ```
