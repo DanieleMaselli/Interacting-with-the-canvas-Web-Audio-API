@@ -31,13 +31,9 @@ window.addEventListener('mousemove',
 
 #### Step 2: Draw on Canvas 
 ```Javascript
-function waveCircle() {
-	var x;
-	var y;
-		x = mouse.x;
-		y = mouse.y;
-    context.beginPath();
-	context.arc(x, y, 50 , 0, 2*Math.PI);
+function drawCircle(x, y) {
+        context.beginPath();
+	context.arc(x, y, 50, 0, 2*Math.PI);
 	context.strokeStyle = "black";
 	context.stroke();
 }
@@ -49,11 +45,10 @@ function clear() {
 function animate() {
 	requestAnimationFrame(animate);
 	clear();
-	waveCircle();
+	drawCircle(mouse.x, mouse.y);
 }
 
 animate();
-
 ```
 #### Web Audio API: 
 
