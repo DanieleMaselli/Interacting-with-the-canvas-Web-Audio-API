@@ -95,12 +95,12 @@ Next we declare the `buffer` variable with our `bufferLength` variable as an arg
 ```Javascript
 var buffer = new Uint8Array(bufferLength);
 ```
-The `drawCircle` function iterates the buffer and creates a circle from the value of each iteration. We then define a variable `v`(value) and use it for the radius of the circle.
+The `drawCircle` function iterates the buffer and creates a circle from the value `v` of each iteration wich will be the radius of the circle. 
 ```Javascript
 function drawCircle(x, y) {
 	
 	for(var i = 0; i < bufferLength; i++) { 
-    	var v = data[i];
+    	var v = buffer[i];
         context.beginPath();
         context.arc(x, y, v, 0, v);
         context.strokeStyle = "black";
