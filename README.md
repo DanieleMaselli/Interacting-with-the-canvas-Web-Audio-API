@@ -87,15 +87,15 @@ analyser.connect(audioContext.destination);
 ```
 #### Merge Web Audio APi and Canvas
 
-Our goal is to interact the moving circle with the audio source. In order to do this, we need to declare a variable that is setting up the `buffer`. 
+Our goal is to create an interaction with the moving circle. In order to do this, we need to declare a variable that is setting up the `buffer`. 
 ```Javascript
-var buffer = analyser.frequencyBinCount;
+var bufferLength = analyser.frequencyBinCount;
 ```
-Next we declare the `data` variable with our `buffer` variable as an argument:
+Next we declare the `buffer` variable with our `bufferLength` variable as an argument:
 ```Javascript
-var data = new Uint8Array(buffer);
+var buffer = new Uint8Array(bufferLength);
 ```
-We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context` within the body. The loop is going to be initialized by defining a variable `i`, and then, in the expression part, we check whether the loop must continue based on our `buffer` and updating the loop every iteration. We then define a variable `v`(value) that is equal to the `data` variable an grap the information of the audio source inside an array `data[i]`. Once we got the `data` we can change the value `v` of the radius and make it interact with the frequency of the audio source. 
+We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context` within the body. The loop is going to be initialized by defining a variable `i`, and then, in the expression part, we check whether the loop must continue based on our `bufferLength` and updating the loop every iteration. We then define a variable `v`(value) that is equal to the `data` variable an grap the information of the audio source inside an array `data[i]`. Once we got the `data` we can change the value `v` of the radius and make it interact with the frequency of the audio source. 
 ```Javascript
 function drawCircle(x, y) {
 	
