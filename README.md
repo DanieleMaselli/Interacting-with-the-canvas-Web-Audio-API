@@ -109,7 +109,7 @@ function drawCircle(x, y) {
 	} 
 }
 ```
-Last step is to grap the `analyser.getByteTimeDomainData` an copy it to our array.
+Last step is to grap the `analyser.getByteTimeDomainData` method an copy it to our array.
 ```Javascript
 function animate() {
 	requestAnimationFrame(animate);
@@ -120,7 +120,7 @@ function animate() {
 
 window.onload = animate();
 ```
-## useful links
+## Useful links
 
 [Web Audio Api](https://developer.mozilla.org/de/docs/Web/API/Web_Audio_API)
 [Web Audio Api - Visual](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
