@@ -118,7 +118,7 @@ function animate() {
 	drawCircle(mouse.x, mouse.y);
 }
 
-window.onload = animate();
+animate();
 ```
 ## Useful links
 
