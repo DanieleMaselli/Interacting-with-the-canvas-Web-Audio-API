@@ -11,7 +11,7 @@ var mouse = {
 var audioContext = new AudioContext();
 var analyser = audioContext.createAnalyser();
 var audio = new Audio();
-audio.src = "audio.mp3";
+audio.src = "fra.wav";
 audio.play();
 
 var source = audioContext.createMediaElementSource(audio);
@@ -19,8 +19,10 @@ source.connect(analyser);
 analyser.connect(audioContext.destination);
 analyser.fftSize = 1024;
 
-var buffer = analyser.frequencyBinCount;
-var data = new Uint8Array(buffer);
+var bufferLenght = analyser.frequencyBinCount;
+var buffer = new Uint8Array(bufferLenght);
+
+
 
 window.addEventListener('mousemove', 
 	function(event){
@@ -31,14 +33,13 @@ window.addEventListener('mousemove',
 
 function drawCircle(x, y) {
 	
-	for(var i = 0; i < buffer; i++) { 
-    	var v = data[i];
-        context.beginPath();
-        context.globalAlpha = 0.100;
-        context.arc(x, y, v, 0, v);
-        context.strokeStyle = "red";
-        context.stroke();
-	} 
+	for(var i = 0; i < bufferLenght; i++) { 
+    		var v = buffer[i];
+        	context.beginPath();
+        	context.arc(x, y, v, 0, v);
+		context.strokeStyle = "black";
+		context.stroke();
+    } 
 }
 
 function clear() {
@@ -47,9 +48,9 @@ function clear() {
 
 function animate() {
 	requestAnimationFrame(animate);
-	analyser.getByteTimeDomainData(data);
+	analyser.getByteTimeDomainData(buffer);
 	clear();
 	drawCircle(mouse.x, mouse.y);
 }
 
-window.onload = animate();
+animate();
