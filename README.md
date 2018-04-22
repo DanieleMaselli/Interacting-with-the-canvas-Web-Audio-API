@@ -10,6 +10,10 @@ A canvas is a single DOM element that encapsulates a picture. To create a new ca
 
 var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
+```
+This method is gonna determine the available `width` and `height` of the browser window's content area. 
+
+```Javascript
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -105,7 +109,17 @@ function drawCircle(x, y) {
 	} 
 }
 ```
+Last step is to grap the `analyser.getByteTimeDomainData` an copy it to our array.
+```Javascript
+function animate() {
+	requestAnimationFrame(animate);
+	analyser.getByteTimeDomainData(data);
+	clear();
+	drawCircle(mouse.x, mouse.y);
+}
 
+animate();
+```
 
 
 
