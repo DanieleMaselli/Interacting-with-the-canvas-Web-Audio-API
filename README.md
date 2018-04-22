@@ -95,7 +95,7 @@ Next we declare the `data` variable with our `buffer` variable as an argument:
 ```Javascript
 var data = new Uint8Array(buffer);
 ```
-We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context` within the body. The loop is going to be initialized by defining a variable, and then, in the expression part, we check whether the loop must continue based on our `data` and updating the loop every iteration. 
+We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context` within the body. The loop is going to be initialized by defining a variable, and then, in the expression part, we check whether the loop must continue based on our `buffer` and updating the loop every iteration. We then define a variable `v` that is equal to an array.  
 ```Javascript
 function drawCircle(x, y) {
 	
