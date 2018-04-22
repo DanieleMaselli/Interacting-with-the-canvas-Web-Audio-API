@@ -122,7 +122,10 @@ window.onload = animate();
 ```
 ## useful links
 
-[I'm an inline-style link](https://developer.mozilla.org/de/docs/Web/API/Web_Audio_API)
+[Web Audio Api](https://developer.mozilla.org/de/docs/Web/API/Web_Audio_API)
+[Web Audio Api - Visual](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+[Javascript](https://eloquentjavascript.net/index.html)
+[JS Canvas](https://developer.mozilla.org/de/docs/Web/Guide/HTML/Canvas_Tutorial)
 
 
 
