@@ -36,8 +36,8 @@ function drawCircle(x, y) {
         context.beginPath();
         context.globalAlpha = 0.100;
         context.arc(x, y, v, 0, v);
-		    context.strokeStyle = "red";
-		    context.stroke();
+        context.strokeStyle = "red";
+        context.stroke();
 	} 
 }
 
