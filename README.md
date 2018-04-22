@@ -95,11 +95,11 @@ Next we declare the `buffer` variable with our `bufferLength` variable as an arg
 ```Javascript
 var buffer = new Uint8Array(bufferLength);
 ```
-We now run with a `for loop` inside our `drawCircle` function. The `loop` is going to wrap the drawing `context` within the body. The loop is going to be initialized by defining a variable `i`, and then, in the expression part, we check whether the loop must continue based on our `bufferLength` and updating the loop every iteration. We then define a variable `v`(value) that is equal to the `data` variable an grap the information of the audio source inside an array `data[i]`. Once we got the `data` we can change the value `v` of the radius and make it interact with the frequency of the audio source. 
+The `drawCircle` function iterates the buffer and creates a circle from the value of each iteration. We then define a variable `v`(value) and use it for the radius of the circle.
 ```Javascript
 function drawCircle(x, y) {
 	
-	for(var i = 0; i < buffer; i++) { 
+	for(var i = 0; i < bufferLength; i++) { 
     	var v = data[i];
         context.beginPath();
         context.arc(x, y, v, 0, v);
@@ -113,7 +113,7 @@ Last step is to grap the `analyser.getByteTimeDomainData` method an copy it to o
 ```Javascript
 function animate() {
 	requestAnimationFrame(animate);
-	analyser.getByteTimeDomainData(data);
+	analyser.getByteTimeDomainData(buffer);
 	clear();
 	drawCircle(mouse.x, mouse.y);
 }
